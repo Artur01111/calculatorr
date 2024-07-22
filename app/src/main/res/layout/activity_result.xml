@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#28323B"
+    tools:context=".ResultActivity">
+
+    <View
+        android:id="@+id/kvadrat"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="390dp"
+        android:layout_height="200.19dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_white_square" />
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/blue"
+        android:layout_width="24dp"
+        android:layout_height="23dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="218dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/blue"
+        android:layout_width="24dp"
+        android:layout_height="23dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="186dp"
+        android:layout_marginTop="218dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="194dp"
+        android:layout_marginTop="218dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/blue"
+        android:layout_width="24dp"
+        android:layout_height="23dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="215dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="215dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="222dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="237dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/blue"
+        android:layout_width="24dp"
+        android:layout_height="23dp"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="215dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="215dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="222dp"
+        android:src="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textSize="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="303dp"
+        android:layout_marginTop="240dp"
+        android:text="accessebility"
+        android:layout_width="72dp"
+        android:layout_height="15dp"/>
+
+    <Spinner
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/typeSpinner"
+        android:layout_width="185dp"
+        android:layout_height="41dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="387dp"
+        android:layout_marginStart="9dp"
+        android:background="@drawable/rounded_spinner"
+        android:padding="10dp"/>
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/gradient_view"
+        android:layout_width="81dp"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="369dp"
+        android:textSize="13dp"
+        android:text="Price"
+        android:layout_width="72dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="464dp"
+        android:textSize="13dp"
+        android:text="Accessibility"
+        android:layout_width="76dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="369dp"
+        android:textSize="13dp"
+        android:text="Category"
+        android:layout_width="72dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="240dp"
+        android:textSize="10dp"
+        android:text="Participants"
+        android:layout_width="72dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="217dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="9sp"
+        android:layout_marginTop="289dp"
+        android:textSize="16sp"
+        android:id="@+id/gradientButton"
+        android:layout_width="390dp"
+        android:layout_height="47dp"
+        android:background="@drawable/gradient_button"
+        android:text="Next"
+        android:textColor="@color/white" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="61dp"
+        android:layout_marginTop="126dp"
+        android:textColor="@color/black"
+        android:id="@+id/resultTextView"
+        android:layout_width="220dp"
+        android:layout_height="45.27dp"
+        android:textSize="17dp" />
+
+    <View
+        android:background="#DC366A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="141dp"
+        android:layout_marginTop="60dp"
+        android:layout_height="23dp"
+        android:layout_width="78dp"/>
+
+    <ImageButton
+        android:id="@+id/likeButton"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/pink2"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/pink"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="141dp"
+        android:layout_marginTop="73dp"
+        android:text="Category"
+        android:layout_height="33dp"
+        android:layout_width="88dp"/>
+
+    <View
+        android:background="@drawable/rounded_white_square"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="390dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="177dp"
+        android:layout_height="10dp"/>
+
+    <View
+        android:background="@drawable/blue"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="390dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="10dp"/>
+
+    <View
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="387dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/pink3"
+        android:layout_width="17dp"
+        android:layout_height="17dp"/>
+
+    <View
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="387dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/pink3"
+        android:layout_width="17dp"
+        android:layout_height="17dp"/>
+
+    <View
+        android:background="@drawable/rounded_white_square"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="485dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="177dp"
+        android:layout_height="10dp"/>
+
+    <View
+        android:background="@drawable/blue"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="485dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="10dp"/>
+
+    <View
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="482dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/pink3"
+        android:layout_width="17dp"
+        android:layout_height="17dp"/>
+
+    <View
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="482dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/pink3"
+        android:layout_width="17dp"
+        android:layout_height="17dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="Free"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_width="50dp"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:text="Price💰"
+        android:layout_marginLeft="63dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="226dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.calculator2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,12 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
+    private Button buttonHidden;
     private String input = "";
     private String operator = "";
     private double firstNumber = 0.0;
     private double secondNumber = 0.0;
     private boolean isNewOperation = true;
     private boolean hasOperator = false;
+    private boolean isError = false;
+    private String resultString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textView);
+        buttonHidden = findViewById(R.id.buttonHidden);
 
         Button button0 = findViewById(R.id.button0);
         Button button1 = findViewById(R.id.button1);
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Button button = (Button) v;
                 appendNumber(button.getText().toString());
+                buttonHidden.setVisibility(View.GONE);
             }
         };
 
@@ -63,38 +69,54 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 appendDot();
+                buttonHidden.setVisibility(View.GONE);
             }
         });
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setOperator("+");
+                if (!isError) {
+                    setOperator("+");
+                    buttonHidden.setVisibility(View.GONE);
+                }
             }
         });
         buttonSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setOperator("-");
+                if (!isError) {
+                    setOperator("-");
+                    buttonHidden.setVisibility(View.GONE);
+                }
             }
         });
         buttonMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setOperator("*");
+                if (!isError) {
+                    setOperator("*");
+                    buttonHidden.setVisibility(View.GONE);
+                }
             }
         });
         buttonDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setOperator("/");
+                if (!isError) {
+                    setOperator("/");
+                    buttonHidden.setVisibility(View.GONE);
+                }
             }
         });
 
         buttonEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculate();
+                if (!isError) {
+                    calculate();
+                    buttonHidden.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -102,11 +124,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 clear();
+                buttonHidden.setVisibility(View.GONE);
             }
         });
     }
 
     private void appendNumber(String number) {
+        if (isError) {
+            clear();
+        }
         if (isNewOperation) {
             input = "";
             isNewOperation = false;
@@ -116,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void appendDot() {
+        if (isError) {
+            clear();
+        }
         if (!input.contains(".")) {
             if (isNewOperation) {
                 input = "0";
@@ -163,11 +192,13 @@ public class MainActivity extends AppCompatActivity {
                     result = firstNumber / secondNumber;
                 } else {
                     textView.setText("Error");
+                    isError = true;
                     return;
                 }
                 break;
         }
-        textView.setText(formatResult(result));
+        resultString = formatResult(result);
+        textView.setText(resultString);
         input = String.valueOf(result);
         firstNumber = result;
         isNewOperation = true;
@@ -182,6 +213,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void calculatePercent() {
+        if (!input.isEmpty()) {
+            double value = Double.parseDouble(input);
+            value = value / 100;
+            input = String.valueOf(value);
+            textView.setText(formatResult(value));
+        }
+    }
+
     private void clear() {
         input = "";
         operator = "";
@@ -189,6 +229,13 @@ public class MainActivity extends AppCompatActivity {
         secondNumber = 0.0;
         isNewOperation = true;
         hasOperator = false;
+        isError = false;
         textView.setText("0");
+    }
+
+    public void onHiddenButtonClick(View view) {
+        Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+        intent.putExtra("result", resultString);
+        startActivity(intent);
     }
 }

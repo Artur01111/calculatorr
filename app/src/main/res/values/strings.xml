@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">calculator2</string>
+    <string name="app_name">calculator</string>
+    <string name="type">type</string>
+    <string-array name="type_array">
+        <item>Выбор:</item>
+        <item>Король</item>
+        <item>Рыцарь</item>
+        <item>Маг</item>
+    </string-array>
 </resources>
