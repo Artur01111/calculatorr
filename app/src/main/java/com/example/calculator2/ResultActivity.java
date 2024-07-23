@@ -1,5 +1,7 @@
 package com.example.calculator2;
 
+import static com.example.calculator2.R.drawable.*;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -56,8 +58,10 @@ public class ResultActivity extends AppCompatActivity {
         likeButton.setOnClickListener(v -> {
             isLiked = !isLiked;
             if (isLiked) {
+                likeButton.setBackgroundResource(R.drawable.pink2);
                 likeButton.setImageResource(R.drawable.heart);
             } else {
+                likeButton.setBackgroundResource(R.drawable.black);
                 likeButton.setImageResource(R.drawable.heart2);
             }
         });
